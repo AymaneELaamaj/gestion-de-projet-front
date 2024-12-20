@@ -33,14 +33,19 @@
             <td>{{ projet.name }}</td>
             <td>{{ projet.debut }}</td>
             <td>{{ projet.fin }}</td>
-            <td>{{ projet.status }}</td>
+            <td>
+              <button class="btn btn-info" (click)="updatestatus(projet.id)">
+                {{ projet.status }}
+              </button>
+            </td>
+
             <td>
               <button class="btn btn-info" (click)="gotousers(projet)">
                 users
               </button>
             </td>
             <td>
-              <button class="btn btn-danger">
+              <button class="btn btn-danger" (click)="deleteproject(projet.id)">
                 <i class="bi bi-trash"></i>
               </button>
             </td>

@@ -1,0 +1,14 @@
+<div class="container">
+  <form [formGroup]="updateproject" (ngSubmit)="updatestatus()">
+    <div class="col-md-6 mb-3">
+      <label for="status" class="form-label">Status</label>
+      <select formControlName="status" class="form-select" id="status" required>
+        <option value="" disabled selected>-- Sélectionner le statut --</option>
+        <option value="Non_commencé">Non_commencé</option>
+        <option value="En_cours">En_cours</option>
+        <option value="Terminé">Terminé</option>
+      </select>
+    </div>
+    <button class="btn btn-info">Update</button>
+  </form>
+</div>

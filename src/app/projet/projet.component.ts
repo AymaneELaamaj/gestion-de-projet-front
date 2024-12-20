@@ -30,4 +30,19 @@ export class ProjetComponent implements OnInit {
     });
   }
 
+  updatestatus(id:any){
+    this.router.navigate(["/updatestatus",id])
+  }
+  deleteproject(id:any){
+    this.service.delete(id).subscribe({
+      next:(value)=>{
+          alert("deleted")
+          window.location.reload()
+      },error(err) {
+          console.log("err")
+      },
+    })
+  }
+
+
 }

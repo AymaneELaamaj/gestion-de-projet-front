@@ -17,6 +17,7 @@ import { TacheComponent } from './tache/tache.component';
 import { ListTacheComponent } from './list-tache/list-tache.component';
 import { AddusertoprojetComponent } from './addusertoprojet/addusertoprojet.component';
 import { AddtachetouserComponent } from './addtachetouser/addtachetouser.component';
+import { UpdateprojetComponent } from './updateprojet/updateprojet.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddtachetouserComponent } from './addtachetouser/addtachetouser.compone
     TacheComponent,
     ListTacheComponent,
     AddusertoprojetComponent,
-    AddtachetouserComponent
+    AddtachetouserComponent,
+    UpdateprojetComponent
   ],
   imports: [
     BrowserModule,
