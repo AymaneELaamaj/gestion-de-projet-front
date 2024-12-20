@@ -1,0 +1,53 @@
+<div class="container pt-3">
+  <div class="card">
+    <div class="card-header d-flex justify-content-between">
+      <!-- Titre du projet aligné à gauche -->
+      <h5 class="m-0">Projet</h5>
+
+      <!-- Bouton pour ajouter un projet aligné à droite -->
+      <div>
+        <button class="btn btn-success" routerLink="/addprojet">
+          <i class="bi bi-plus-circle me-2"></i>
+          <!-- Icône d'ajout -->
+          Ajouter un projet
+        </button>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Debut</th>
+            <th>Fin</th>
+            <th>Status</th>
+            <th>Users</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let projet of Projets">
+            <td>{{ projet.id }}</td>
+            <td>{{ projet.name }}</td>
+            <td>{{ projet.debut }}</td>
+            <td>{{ projet.fin }}</td>
+            <td>{{ projet.status }}</td>
+            <td>
+              <button class="btn btn-info" (click)="gotousers(projet)">
+                users
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-danger">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div></div>
+</div>

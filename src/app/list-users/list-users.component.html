@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card mt-3">
+    <div class="card-header">Users</div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Tâche</th>
+            <th>debut</th>
+            <th>Fin</th>
+            <th>Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of Users">
+            <td>{{ user.uid }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.tache?.name || "N/A" }}</td>
+            <td>{{ user.tache?.debut || "N/A" }}</td>
+            <td>{{ user.tache?.fin || "N/A" }}</td>
+            <td>{{ user.tache?.status || "N/A" }}</td>
+
+            <td>
+              <button>
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

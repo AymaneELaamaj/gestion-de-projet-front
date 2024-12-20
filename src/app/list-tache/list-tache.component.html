@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="card mt-3">
+    <div class="card-header d-flex justify-content-between">
+      <!-- Titre du projet aligné à gauche -->
+      <h5 class="m-0">Taches</h5>
+
+      <!-- Bouton pour ajouter un projet aligné à droite -->
+      <div>
+        <button class="btn btn-success" routerLink="/addtache">
+          <i class="bi bi-plus-circle me-2"></i>
+          <!-- Icône d'ajout -->
+          Ajouter une atche
+        </button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tâche</th>
+            <th>debut</th>
+            <th>Fin</th>
+            <th>Status</th>
+            <th>Utilisateur</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tache of taches">
+            <td>{{ tache.tid }}</td>
+            <td>{{ tache.name }}</td>
+
+            <td>{{ tache.debut || "N/A" }}</td>
+            <td>{{ tache.fin || "N/A" }}</td>
+            <td>{{ tache.status || "N/A" }}</td>
+            <td>
+              <button class="btn btn-success" routerLink="/addtachetouser">
+                <i class="bi bi-plus-circle me-2"></i>
+              </button>
+            </td>
+
+            <td>
+              <button>
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

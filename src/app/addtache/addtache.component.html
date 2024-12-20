@@ -1,0 +1,62 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Ajouter une tache</h2>
+  <form [formGroup]="tacheform" (ngSubmit)="Addtache()">
+    <div class="mb-3">
+      <label for="nomProjet" class="form-label">Nom du tache</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nomtache"
+        formControlName="name"
+        placeholder="Entrez le nom du tache"
+        required
+      />
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="dateDebut" class="form-label">Date de début</label>
+        <input
+          type="Date"
+          formControlName="debut"
+          class="form-control"
+          id="dateDebut"
+          required
+        />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="status" class="form-label">Status</label>
+        <select
+          formControlName="status"
+          class="form-select"
+          id="status"
+          required
+        >
+          <option value="" disabled selected>
+            -- Sélectionner le statut --
+          </option>
+          <option value="Non_commencé">Non_commencé</option>
+          <option value="En_cours">En_cours</option>
+          <option value="Terminé">Terminé</option>
+        </select>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="dateFin" class="form-label">Date de fin</label>
+        <input
+          type="Date"
+          formControlName="fin"
+          class="form-control"
+          id="dateFin"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg">
+        Ajouter la tache
+      </button>
+    </div>
+  </form>
+</div>
