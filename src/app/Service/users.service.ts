@@ -19,4 +19,7 @@ export class UsersService {
   public addusertoptojet(add:any):Observable<any>{
     return this.http.post<any>("http://localhost:8080/Users/addtoproj",add)
   }
+  public deleteuser(uid:any):Observable<any>{
+    return this.http.delete(`http://localhost:8080/Users/delete/${uid}`)
+  }
 }

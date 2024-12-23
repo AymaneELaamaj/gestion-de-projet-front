@@ -24,6 +24,16 @@ export class ListUsersComponent implements OnInit {
       },
     })
   }
+  deleteuser(uid:any){
+    this.service.deleteuser(uid).subscribe({
+      next(value) {
+          alert("user deleted")
+          window.location.reload
+      },error(err) {
+          console.log(err)
+      },
+    })
+  }
 
 
 }

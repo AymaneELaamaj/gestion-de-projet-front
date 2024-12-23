@@ -18,6 +18,9 @@ import { ListTacheComponent } from './list-tache/list-tache.component';
 import { AddusertoprojetComponent } from './addusertoprojet/addusertoprojet.component';
 import { AddtachetouserComponent } from './addtachetouser/addtachetouser.component';
 import { UpdateprojetComponent } from './updateprojet/updateprojet.component';
+import { NgChartsModule } from 'ng2-charts';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import{ CanvasJSAngularChartsModule}from'@canvasjs/angular-charts'
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { UpdateprojetComponent } from './updateprojet/updateprojet.component';
     ListTacheComponent,
     AddusertoprojetComponent,
     AddtachetouserComponent,
-    UpdateprojetComponent
+    UpdateprojetComponent,
+    AcceuilComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,11 @@ import { UpdateprojetComponent } from './updateprojet/updateprojet.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgChartsModule,
+    CanvasJSAngularChartsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

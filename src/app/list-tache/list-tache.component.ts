@@ -22,5 +22,15 @@ export class ListTacheComponent implements OnInit{
       },
     })
   }
+  deletetache(tid:any){
+    this.service.deletetache(tid).subscribe({
+      next(value) {
+          alert(" Tache deleted")
+          window.location.reload
+      },error(err) {
+          console.log(err)
+      },
+    })
+  }
 
 }

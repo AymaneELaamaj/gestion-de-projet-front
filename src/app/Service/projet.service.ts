@@ -26,4 +26,6 @@ export class ProjetService {
     return this.http.delete(`http://localhost:8080/Project/delete/${id}`);
 
   }
-}
+  public getstatus():Observable<any>{
+    return this.http.get("http://localhost:8080/Project/getstatus")
+  }}

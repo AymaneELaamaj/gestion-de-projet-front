@@ -19,5 +19,9 @@ export class TacheService {
   public addtachetouser(addusertoprj:any):Observable<any>{
     return this.http.post<any>("http://localhost:8080/taches/addtachetoprj",addusertoprj)
   }
+  public deletetache(tid:any):Observable<any>{
+    return this.http.delete(`http://localhost:8080/taches/delete/${tid}`)
+  }
+
 
 }

@@ -14,24 +14,32 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/taches"
-            >Taches</a
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/addtachetouser"
-            >assoer une tache a une utilsateur</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/projet">Projet</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/addusers">Add User</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/listusers">List User</a>
+            Taches
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                routerLink="/taches"
+                >List Taches</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/addtachetouser"
+                >assoer une tache a une utilsateur</a
+              >
+            </li>
+          </ul>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -42,13 +50,20 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown link
+            Users
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/addusers">Add User</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/listusers">List User</a>
+            </li>
           </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/projet">Projet</a>
         </li>
       </ul>
     </div>
