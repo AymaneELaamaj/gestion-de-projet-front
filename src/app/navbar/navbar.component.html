@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">MonSite</a>
+    <a class="navbar-brand" routerLink="/acceuil">
+      <i class="bi bi-house-door me-2"></i> Acceuil
+    </a>
+
     <button
       class="navbar-toggler"
       type="button"
@@ -12,58 +15,80 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Dropdown Tâches -->
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
-            id="navbarDropdownMenuLink"
+            id="navbarDropdownTaches"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Taches
+            <i class="bi bi-list-check me-2"></i> Tâches
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                routerLink="/taches"
-                >List Taches</a
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownTaches">
+            <li>
+              <a class="dropdown-item" routerLink="/taches">List Tâches</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/addtachetouser"
+                >Assigner Tâche</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/addtachetouser"
-                >assoer une tache a une utilsateur</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Users
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/addusers">Add User</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/listusers">List User</a>
             </li>
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/projet">Projet</a>
+        <!-- Dropdown Utilisateurs -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownUsers"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="bi bi-person-lines-fill me-2"></i> Utilisateurs
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsers">
+            <li>
+              <a class="dropdown-item" routerLink="/addusers"
+                >Ajouter Utilisateur</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/listusers"
+                >Liste Utilisateurs</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- Projet Section -->
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownUsers"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="bi bi-briefcase me-2"></i> Projet
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsers">
+            <li>
+              <a class="dropdown-item" routerLink="/acceuil">Resumé</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/projet">Liste Project</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

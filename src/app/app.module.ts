@@ -20,7 +20,8 @@ import { AddtachetouserComponent } from './addtachetouser/addtachetouser.compone
 import { UpdateprojetComponent } from './updateprojet/updateprojet.component';
 import { NgChartsModule } from 'ng2-charts';
 import { AcceuilComponent } from './acceuil/acceuil.component';
-import{ CanvasJSAngularChartsModule}from'@canvasjs/angular-charts'
+import{ CanvasJSAngularChartsModule}from'@canvasjs/angular-charts';
+import { FirstpageComponent } from './firstpage/firstpage.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import{ CanvasJSAngularChartsModule}from'@canvasjs/angular-charts'
     AddusertoprojetComponent,
     AddtachetouserComponent,
     UpdateprojetComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    FirstpageComponent
   ],
   imports: [
     BrowserModule,

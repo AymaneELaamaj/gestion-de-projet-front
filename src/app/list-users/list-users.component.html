@@ -1,31 +1,40 @@
-<div class="container">
-  <div class="card mt-3">
-    <div class="card-header">Users</div>
+<div class="container mt-4">
+  <div class="card shadow-lg border-0">
+    <div
+      class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
+    >
+      <!-- Titre des utilisateurs aligné à gauche -->
+      <h5 class="m-0"><i class="bi bi-person-circle me-2"></i> Utilisateurs</h5>
+    </div>
+
     <div class="card-body">
-      <table class="table">
-        <thead>
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Tâche</th>
-            <th>debut</th>
-            <th>Fin</th>
-            <th>Status</th>
-            <th>Delete</th>
+            <th scope="col">ID</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Tâche</th>
+            <th scope="col">Début</th>
+            <th scope="col">Fin</th>
+            <th scope="col">Statut</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let user of Users">
             <td>{{ user.uid }}</td>
-            <td>{{ user.name }}</td>
+            <td class="fw-bold text-primary">{{ user.name }}</td>
             <td>{{ user.tache?.name || "N/A" }}</td>
             <td>{{ user.tache?.debut || "N/A" }}</td>
             <td>{{ user.tache?.fin || "N/A" }}</td>
             <td>{{ user.tache?.status || "N/A" }}</td>
 
             <td>
-              <button class="btn btn-danger" (click)="deleteuser(user.uid)">
-                <i class="bi bi-trash"></i>
+              <button
+                class="btn btn-sm btn-danger"
+                (click)="deleteuser(user.uid)"
+              >
+                <i class="bi bi-trash"></i> Supprimer
               </button>
             </td>
           </tr>

@@ -1,0 +1,103 @@
+/* navbar.css */
+
+/* Style général de la navbar */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 3px solid #007bff; /* Ligne sous la navbar */
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #f1f1f1;
+}
+
+/* Logo et titre */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #0056b3;
+}
+
+/* Liens de la navbar */
+.nav-item .nav-link {
+  color: #495057;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.2rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: #007bff;
+  border-bottom: 3px solid #007bff; /* Ligne sous les éléments au survol */
+}
+
+/* Dropdown menu */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-link.dropdown-toggle {
+  color: #495057;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link.dropdown-toggle:hover {
+  color: #007bff;
+}
+
+.nav-item .dropdown-menu {
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-item .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #495057;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Styles pour le bouton hamburger en mobile */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff;
+}
+
+/* Petit ajustement pour les icônes */
+.nav-item .nav-link i {
+  font-size: 1.2rem;
+}
+
+/* Animation du dropdown */
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}

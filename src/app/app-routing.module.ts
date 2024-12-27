@@ -12,6 +12,7 @@ import { AddtachetouserComponent } from './addtachetouser/addtachetouser.compone
 import { AddusertoprojetComponent } from './addusertoprojet/addusertoprojet.component';
 import { UpdateprojetComponent } from './updateprojet/updateprojet.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { FirstpageComponent } from './firstpage/firstpage.component';
 
 const routes: Routes = [{path:"addprojet",component:AddprojetComponent},
   {path:"addusers",component:AddusersComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [{path:"addprojet",component:AddprojetComponent},
   {path:"taches",component:ListTacheComponent},
   {path:"addtachetouser",component:AddtachetouserComponent},
   {path:"updatestatus/:id",component:UpdateprojetComponent},
-  {path:"",component:AcceuilComponent},
+  {path:"acceuil",component:AcceuilComponent},
+  {path:"",component:FirstpageComponent},
   {path:"addusertoprojet",component:AddusertoprojetComponent},
   {path:"projet",component:ProjetComponent},
   { path: 'users/:id', component: UsersComponent },

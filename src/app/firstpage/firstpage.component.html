@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h2>Upload an Image</h2>
+  <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+    <div class="form-group">
+      <label for="image">Select Image:</label>
+      <input
+        type="file"
+        id="image"
+        (change)="onFileChange($event)"
+        class="form-control"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Upload</button>
+  </form>
+</div>

@@ -19,10 +19,19 @@ interface StatsProjet {
 export class AcceuilComponent implements OnInit {
   statsProjet: StatsProjet = { Terminé: 0, Non_commencé: 0, En_cours: 0 };
   chart: any;
-  isAccueilPage: boolean = false;
+  get termine() {
+    return this.statsProjet['Terminé'];
+  }
+
+  get nonCommence() {
+    return this.statsProjet['Non_commencé'];
+  }
+
+  get enCours() {
+    return this.statsProjet['En_cours'];
+  }
 
   constructor(private service: ProjetService,private router: Router) {
-    this.isAccueilPage = this.router.url === '/';
 
   }
 
@@ -30,12 +39,7 @@ export class AcceuilComponent implements OnInit {
     this.getstatus();
 
   }
-  ngOnDestroy(): void {
-    if (this.chart) {
-      this.chart.destroy();
-      this.chart = undefined; // Supprimez l'instance pour libérer la mémoire
-    }
-  }
+
 
 
 

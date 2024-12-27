@@ -1,3 +1,22 @@
-<div *ngIf="isAccueilPage" style="width: 300px; height: 300px; margin: auto">
-  <canvas id="chart" style="width: 100%; height: 100%"></canvas>
+<div class="container">
+  <!-- Cards Section -->
+  <div class="cards-container">
+    <div class="card">
+      <h3>{{ termine }} terminé(s)</h3>
+      <p>au cours des 7 derniers jours</p>
+    </div>
+    <div class="card">
+      <h3>{{ nonCommence }} non commencé(s)</h3>
+      <p>au cours des 7 derniers jours</p>
+    </div>
+    <div class="card">
+      <h3>{{ enCours }} en cours</h3>
+      <p>au cours des 7 derniers jours</p>
+    </div>
+  </div>
+
+  <!-- Chart Section -->
+  <div style="width: 300px; height: 300px; margin: auto">
+    <canvas id="chart" style="width: 100%; height: 100%"></canvas>
+  </div>
 </div>
